@@ -28,14 +28,14 @@ class _StoryPageState extends State<StoryPage> {
     return Scaffold(
       body: Container(
         //TODO: Step 1 - Add background.png to this Container as a background image.
-        // //Finished
-        // decoration: BoxDecoration(
-        //   image: DecorationImage(
-        //     image: AssetImage('img/background.png'),
-        //     fit: BoxFit
-        //         .cover, // Adjust the fit as needed (cover, fill, fitWidth, etc.)
-        //   ),
-        // ),
+        //Finished
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('img/background.png'),
+            fit: BoxFit
+                .cover, // Adjust the fit as needed (cover, fill, fitWidth, etc.)
+          ),
+        ),
         padding: EdgeInsets.symmetric(vertical: 50.0, horizontal: 15.0),
         constraints: BoxConstraints.expand(),
         child: SafeArea(
@@ -88,6 +88,7 @@ class _StoryPageState extends State<StoryPage> {
                 //TODO: Step 26 - Use a Flutter Visibility Widget to wrap this TextButton.
                 //TODO: Step 28 - Set the "visible" property of the Visibility Widget to equal the output from the buttonShouldBeVisible() method in the storyBrain.
                 child: Visibility(
+                  visible: storyBrain.buttonShouldBeVisible(),
                   child: TextButton(
                     onPressed: () {
                       //Choice 2 made by user.
